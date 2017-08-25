@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Irithyll of the Boreal Valley </h1>
+            <div class="thumbnail">
+                <a href="/images/{{ image }}">
+                    <img src="/images/{{ image }}" alt="..." />
+                </a>
+                <div class="caption">
+                    <h3>Irithyll of the Boreal Valley </h3>
+                    <ul>
+                        <li>Cosa 1</li>
+                        <li>Cosa 2</li>
+                        <li>Cosa 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

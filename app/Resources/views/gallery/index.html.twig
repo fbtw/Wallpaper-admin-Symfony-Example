@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+
+            <h1 class="text-center">Galería</h1>
+
+            {% for image in images %}
+                <div class="col-sm-6 col-md-4">
+                    <a href="images/{{ image }}" class="thumbnail">
+                        <img src="/images/{{ image }}" alt="...">
+                    </a>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <!--div class="row">
+        {% for image in images %}
+            <div class="col-sm-6 col-md-4">
+                <a href="#" class="thumbnail">
+                    <img src="/images/{{ image }}" alt="...">
+                </a>
+            </div>
+        {% endfor %}
+    </div-->
+
+    <div class="navigation text-center">
+        {{ knp_pagination_render(images) }}
+    </div>
+{% endblock %}
+
